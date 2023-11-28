@@ -1,3 +1,16 @@
+:root {
+    --mainGreen: #36B05B;
+    --white: #FFF;
+    --lightGrey: #EBEBEB;
+    --textColor: #000;
+}
+
 body {
     font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
