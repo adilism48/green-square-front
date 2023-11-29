@@ -6,7 +6,7 @@
 }
 
 .header__row a {
-    color: var(--textColor);
+    color: var(--mainGreen);
     font-weight: 400;
     font-size: 20px;
     font-style: normal;

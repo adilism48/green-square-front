@@ -1,0 +1,27 @@
+.promo {
+    background-color: var(--mainGreen);
+}
+
+.promo__content {
+    display: flex;
+    column-gap: 193px;
+}
+
+.promo__text {
+    color: var(--white);
+    padding-top: 205px;
+}
+
+.promo__title {
+    font-size: 48px;
+    max-width: 507px;
+}
+
+.promo_small-title {
+    font-size: 20px;
+}
+
+.promo__img {
+    padding-top: 93px;
+    padding-bottom: 93px;
+}
