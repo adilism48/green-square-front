@@ -13,3 +13,13 @@ body {
     margin: 0 auto;
     padding: 0 30px;
 }
+
+.title-2 {
+    font-size: 40px;
+    color: var(--mainGreen);
+}
+
+.title-3 {
+    font-size: 28px;
+    color: var(--white);
+}

@@ -1,0 +1,25 @@
+.card {
+
+}
+
+.card__img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+
+    border: 5px solid var(--mainGreen);
+}
+
+.card__title {
+    padding-top: 12px;
+
+    font-size: 24px;
+    color: var(--mainGreen);
+}
+
+.card__price {
+    padding-top: 12px;
+
+    font-size: 32px;
+    color: var(--mainGreen);
+}

@@ -13,17 +13,6 @@ function Header() {
                     <a href="#!">Войти</a>
                 </div>
             </div>
-            <nav className="header__nav">
-                <div className="container">
-                    <ul>
-                        <li><a href="#!">Овощи</a></li>
-                        <li><a href="#!">Фрукты</a></li>
-                        <li><a href="#!">Разное</a></li>
-                        <li><a href="#!">О нас</a></li>
-                        <li><a href="#!">Сотрудничество</a></li>
-                    </ul>
-                </div>
-            </nav>
         </header>
     )
 }

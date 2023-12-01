@@ -9,7 +9,7 @@
 
 .promo__text {
     color: var(--white);
-    padding-top: 205px;
+    padding-top: 275px;
 }
 
 .promo__title {
@@ -22,6 +22,6 @@
 }
 
 .promo__img {
-    padding-top: 93px;
-    padding-bottom: 93px;
+    padding-top: 163px;
+    padding-bottom: 163px;
 }
