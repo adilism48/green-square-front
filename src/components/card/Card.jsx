@@ -1,13 +1,12 @@
 import './card.css'
-import cucumber from './../../img/cucumber.jpg'
 
-const Card = () => {
+const Card = ({title, price, img}) => {
     return (
         <div className="card">
-            <img className="card__img" src={cucumber} alt="cucumber"/>
+            <img className="card__img" src={img} alt={title}/>
             <div className="card__body">
-                <div className="card__title">Cucumber</div>
-                <div className="card__price">1250com/kg</div>
+                <div className="card__title">{title}</div>
+                <div className="card__price">{price}</div>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import './product.css'
 import Card from "../card/Card";
+import cucumber from './../../img/cucumber.jpg'
 
 const Product = () => {
     return (
@@ -21,10 +22,10 @@ const Product = () => {
             </div>
             <div className="container">
                 <div className="product__cards">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card title="Cucumber" price="1250som/kg" img={cucumber} />
+                    <Card title="Cucumber" price="12250som/kg" img={cucumber} />
+                    <Card title="Cucumber" price="120som/kg" img={cucumber} />
+                    <Card title="Cucumber" price="12som/kg" img={cucumber} />
                 </div>
             </div>
         </section>
