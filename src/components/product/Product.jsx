@@ -6,6 +6,9 @@ const Product = () => {
         <section className="product">
             <div className="product__header">
                 <h2 className="title-2">Наша продукция</h2>
+                <h4 className="product__header__text">Для заказа товара вам нужно связаться с нами по номеру</h4>
+                <h2 className="title-2">+996 555 223344</h2>
+                <h2 className="title-2">+996 777 223344</h2>
             </div>
             <div className="filter">
                 <div className="container">

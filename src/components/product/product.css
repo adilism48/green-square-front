@@ -27,3 +27,11 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 25px;
 }
+
+.product__header__text {
+    font-size: 24px;
+    color: var(--mainGreen);
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
