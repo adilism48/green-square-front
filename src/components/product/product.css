@@ -13,11 +13,25 @@
 }
 
 .filter__items {
-    display: flex;
-    justify-content: space-between;
-
     padding-top: 28px;
     padding-bottom: 28px;
+
+    font-size: 28px;
+    color: var(--white);
+}
+
+.items__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+li:hover {
+    color: lightgray;
+}
+
+.active {
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
 }
 
 .product__cards {

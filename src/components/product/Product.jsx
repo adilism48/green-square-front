@@ -1,8 +1,11 @@
 import './product.css'
 import Card from "../card/Card";
 import cucumber from './../../img/cucumber.jpg'
+import {useState} from "react";
 
 const Product = () => {
+    const [value, onClickCategory] = useState(0)
+
     return (
         <section className="product">
             <div className="product__header">
@@ -14,18 +17,23 @@ const Product = () => {
             <div className="filter">
                 <div className="container">
                     <div className="filter__items">
-                        <h3 className="title-3">Овощи</h3>
-                        <h3 className="title-3">Фрукты</h3>
-                        <h3 className="title-3">Разное</h3>
+                        <ul className="items__list">
+                            {['Все', 'Овощи', 'Фрукты', 'Разное'].map((itemName, i) => (
+                                <li key={i} onClick={() => onClickCategory(i)} className={value === i ? 'active' : ''}>
+                                    {itemName}
+                                </li>
+                            ))}
+
+                        </ul>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="product__cards">
-                    <Card title="Cucumber" price="1250som/kg" img={cucumber} />
-                    <Card title="Cucumber" price="12250som/kg" img={cucumber} />
-                    <Card title="Cucumber" price="120som/kg" img={cucumber} />
-                    <Card title="Cucumber" price="12som/kg" img={cucumber} />
+                    <Card id="1" category="1" title="Cucumber" price="1250som/kg" img={cucumber} />
+                    <Card id="2" category="1" title="Cucumber" price="12250som/kg" img={cucumber} />
+                    <Card id="3" category="1" title="Cucumber" price="120som/kg" img={cucumber} />
+                    <Card id="4" category="1" title="Cucumber" price="12som/kg" img={cucumber} />
                 </div>
             </div>
         </section>

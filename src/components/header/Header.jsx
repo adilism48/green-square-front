@@ -10,7 +10,7 @@ function Header() {
                         <img src={logoImg} alt="logo"/>
                         <span>Зелёный Квадрат</span>
                     </div>
-                    <a href="#!">Войти</a>
+                    <a href="/login">Войти</a>
                 </div>
             </div>
         </header>

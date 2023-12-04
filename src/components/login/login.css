@@ -1,0 +1,26 @@
+.login {
+
+}
+
+.login__content {
+    font-size: 20px;
+    padding-top: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-field {
+    border-bottom: 2px solid var(--mainGreen);
+    margin: 8px;
+    padding-bottom: 5px;
+}
+
+.login-btn {
+    padding: 5px 8px;
+
+    color: var(--mainGreen);
+    border: 2px solid var(--mainGreen);
+}
