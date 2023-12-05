@@ -60,6 +60,11 @@
     padding: 10px;
 }
 
+.list-btns {
+    display: flex;
+    column-gap: 10px;
+}
+
 .upd-btn {
     color: var(--white);
     background-color: var(--mainGreen);

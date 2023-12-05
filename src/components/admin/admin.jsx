@@ -30,6 +30,7 @@ return (
                     </div>
                     <button className="add-btn">Add</button>
                 </div>
+                <h2 className="admin-title">Product List</h2>
                 <div className="product__list">
                     <ProductItem product="lolkek" />
                     <ProductItem product="lolkek" />
@@ -60,7 +61,7 @@ const ProductItem = ({product, deleteAction, updateAction}) => {
                         </div>
                     }
                 />
-                <Button variant="primary">Delete</Button>
+                <Button variant="danger">Delete</Button>
             </div>
         </div>
     )
