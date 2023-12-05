@@ -14,7 +14,7 @@ const ModalButton = ({ modalContent, title, btnName }) => {
 
     return (
         <div>
-            <Button variant="primary" onClick={handleOpenModal}>
+            <Button className="btn" variant="primary" onClick={handleOpenModal}>
                 {btnName}
             </Button>
 

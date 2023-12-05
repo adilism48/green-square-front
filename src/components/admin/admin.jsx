@@ -1,5 +1,7 @@
 import './admin.css'
 import ModalButton from "./ModalBtn";
+import {Button} from "react-bootstrap";
+import React from "react";
 
 const Admin = () => {
 return (
@@ -48,16 +50,18 @@ const ProductItem = ({product, deleteAction, updateAction}) => {
             <div className="item__category">category</div>
             <div className="item__name">name</div>
             <div className="item__price">price</div>
-            <ModalButton
-                btnName={"Update"}
-                title={"Update post"}
-                modalContent={
-                    <div>
-                        Modal
-                    </div>
-                }
-            />
-            <button className="del-btn">Delete</button>
+            <div className="list-btns">
+                <ModalButton
+                    btnName={"Update"}
+                    title={"Update post"}
+                    modalContent={
+                        <div>
+                            Modal
+                        </div>
+                    }
+                />
+                <Button variant="primary">Delete</Button>
+            </div>
         </div>
     )
 }
