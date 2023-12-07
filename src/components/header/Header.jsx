@@ -1,7 +1,11 @@
 import logoImg from '../../img/logo.svg'
 import './header.css'
+import Userfront from "@userfront/toolkit/react";
+import {useLocation} from "react-router-dom";
 
 function Header() {
+    const {pathname} = useLocation()
+
     return (
         <header className="header">
             <div className="container">
@@ -10,7 +14,13 @@ function Header() {
                         <img src={logoImg} alt="logo"/>
                         <span>Зелёный Квадрат</span>
                     </div>
-                    <a href="/login">Войти</a>
+                    {
+                        pathname == "/admin" ? (
+                            <a href="/" onClick={Userfront.logout}>Выйти</a>
+                        ) : (
+                            <a href="/login">Войти</a>
+                        )
+                    }
                 </div>
             </div>
         </header>

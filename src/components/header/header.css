@@ -27,3 +27,7 @@
     font-style: normal;
     line-height: normal;
 }
+
+.btn-container {
+    max-width: 100px;
+}
