@@ -23,11 +23,6 @@ const ModalButton = ({ modalContent, title, btnName }) => {
                     <Modal.Title>{title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>{modalContent}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseModal}>
-                        Close
-                    </Button>
-                </Modal.Footer>
             </Modal>
         </div>
     );

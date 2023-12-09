@@ -13,14 +13,14 @@ function Header() {
                     <div className="header__logo">
                         <a href="/">
                             <img src={logoImg} alt="logo"/>
-                            <span>Зелёный Квадрат</span>
+                            <span>Green Square</span>
                         </a>
                     </div>
                     {
                         pathname === "/admin" ? (
-                            <a href="/" onClick={Userfront.logout}>Выйти</a>
+                            <a href="/" onClick={Userfront.logout}>Logout</a>
                         ) : (
-                            <a href="/admin">Войти</a>
+                            <a href="/admin">Login</a>
                         )
 
                     }

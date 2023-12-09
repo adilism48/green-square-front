@@ -17,8 +17,8 @@ const Product = () => {
     return (
         <section className="product">
             <div className="product__header">
-                <h2 className="title-2">Наша продукция</h2>
-                <h4 className="product__header__text">Для заказа товара вам нужно связаться с нами по номеру</h4>
+                <h2 className="title-2">Our products</h2>
+                <h4 className="product__header__text">To order a product, you need to contact us by phone number</h4>
                 <h2 className="title-2">+996 555 223344</h2>
                 <h2 className="title-2">+996 777 223344</h2>
             </div>
@@ -26,7 +26,7 @@ const Product = () => {
                 <div className="container">
                     <div className="filter__items">
                         <ul className="items__list">
-                            {['Овощи', 'Фрукты', 'Разное'].map((itemName, i) => (
+                            {['Vegetables', 'Fruits', 'Other'].map((itemName, i) => (
                                 <li key={i} onClick={() => onClickCategory(i)} className={value === i ? 'active' : ''}>
                                     {itemName}
                                 </li>

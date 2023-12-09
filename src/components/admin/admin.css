@@ -29,6 +29,12 @@
     border: 2px solid var(--white);
 }
 
+.admin-input-line {
+    font-size: 20px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+
 .categories {
     width: 100%;
     max-width: 150px;
@@ -75,4 +81,16 @@
     color: var(--white);
     background-color: var(--mainGreen);
     padding: 4px 8px;
+}
+
+.categories-in-modal {
+    width: 100%;
+    max-width: 150px;
+    font-size: 20px;
+
+    display: block;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
