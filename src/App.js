@@ -35,7 +35,6 @@ function App() {
 const RequireAuth = ({children}) => {
     let location = useLocation();
     if (!Userfront.tokens.accessToken) {
-        // Redirect to the /login page
         return <Navigate to="/login" state={{from: location}} replace/>;
     }
 

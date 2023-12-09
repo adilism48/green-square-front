@@ -11,15 +11,18 @@ function Header() {
             <div className="container">
                 <div className="header__row">
                     <div className="header__logo">
-                        <img src={logoImg} alt="logo"/>
-                        <span>Зелёный Квадрат</span>
+                        <a href="/">
+                            <img src={logoImg} alt="logo"/>
+                            <span>Зелёный Квадрат</span>
+                        </a>
                     </div>
                     {
-                        pathname == "/admin" ? (
+                        pathname === "/admin" ? (
                             <a href="/" onClick={Userfront.logout}>Выйти</a>
                         ) : (
-                            <a href="/login">Войти</a>
+                            <a href="/admin">Войти</a>
                         )
+
                     }
                 </div>
             </div>

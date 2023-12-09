@@ -1,9 +1,18 @@
 import './admin.css'
 import ModalButton from "./ModalBtn";
 import {Button} from "react-bootstrap";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
 const Admin = () => {
+    const [allProducts, setProducts] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:5152/api/GreenSquare/GetProducts').then(res => {
+            setProducts(res.data)
+        }).catch(err => {console.log(err)})
+    }, [])
+
 return (
         <div className="admin">
             <div className="container">
@@ -32,9 +41,11 @@ return (
                 </div>
                 <h2 className="admin-title">Product List</h2>
                 <div className="product__list">
-                    <ProductItem product="lolkek" />
-                    <ProductItem product="lolkek" />
-                    <ProductItem product="lolkek" />
+                    {
+                        allProducts.map(x => (
+                            <ProductItem product={x} />
+                        ))
+                    }
                 </div>
             </div>
         </div>
@@ -47,10 +58,9 @@ const ProductItem = ({product, deleteAction, updateAction}) => {
     return (
         <div className="product__item">
             <div className="item_photo">photo</div>
-            <div className="item__id">id</div>
-            <div className="item__category">category</div>
-            <div className="item__name">name</div>
-            <div className="item__price">price</div>
+            <div className="item__id">{product.id}</div>
+            <div className="item__name">{product.product_name}</div>
+            <div className="item__price">{product.price}</div>
             <div className="list-btns">
                 <ModalButton
                     btnName={"Update"}

@@ -15,9 +15,12 @@
 
 .header__logo {
     padding: 5px 0;
+    column-gap: 14px;
+}
+
+.header__logo a {
     display: flex;
     align-items: center;
-    column-gap: 14px;
 }
 
 .header__logo span {

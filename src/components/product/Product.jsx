@@ -1,10 +1,18 @@
 import './product.css'
 import Card from "../card/Card";
 import cucumber from './../../img/cucumber.jpg'
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 const Product = () => {
     const [value, onClickCategory] = useState(0)
+    const [allProducts, setProducts] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://localhost:5152/api/GreenSquare/GetProductsByCategory?category=${value}`).then(res => {
+            setProducts(res.data)
+        }).catch(err => {console.log(err)})
+    }, [value])
 
     return (
         <section className="product">
@@ -18,22 +26,22 @@ const Product = () => {
                 <div className="container">
                     <div className="filter__items">
                         <ul className="items__list">
-                            {['Все', 'Овощи', 'Фрукты', 'Разное'].map((itemName, i) => (
+                            {['Овощи', 'Фрукты', 'Разное'].map((itemName, i) => (
                                 <li key={i} onClick={() => onClickCategory(i)} className={value === i ? 'active' : ''}>
                                     {itemName}
                                 </li>
                             ))}
-
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="product__cards">
-                    <Card id="1" category="1" title="Cucumber" price="1250som/kg" img={cucumber} />
-                    <Card id="2" category="1" title="Cucumber" price="12250som/kg" img={cucumber} />
-                    <Card id="3" category="1" title="Cucumber" price="120som/kg" img={cucumber} />
-                    <Card id="4" category="1" title="Cucumber" price="12som/kg" img={cucumber} />
+                    {
+                        allProducts.map(x => (
+                            <Card product={x} img={cucumber}/>
+                        ))
+                    }
                 </div>
             </div>
         </section>

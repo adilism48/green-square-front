@@ -1,12 +1,12 @@
 import './card.css'
 
-const Card = ({title, price, img}) => {
+const Card = ({product, img}) => {
     return (
         <div className="product-card">
-            <img className="card__img" src={img} alt={title}/>
+            <img className="card__img" src={img} alt={product.product_name}/>
             <div className="card__body">
-                <div className="card__title">{title}</div>
-                <div className="card__price">{price}</div>
+                <div className="card__title">{product.product_name}</div>
+                <div className="card__price">{product.price}</div>
             </div>
         </div>
     )
