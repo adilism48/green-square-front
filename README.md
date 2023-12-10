@@ -19,4 +19,4 @@ Working with API [GreenSquareAPI] in localhost.
 [GreenSquare ReactJS]: <https://adilism48.github.io/boring-typer/>
 [Axios]: https://www.npmjs.com/package/react-axios
 [React-Bootstrap]: https://www.npmjs.com/package/react-bootstrap
-[React-Bootstrap]: https://github.com/adilism48/GreenSquareAPI
+[GreenSquareAPI]: https://github.com/adilism48/GreenSquareAPI
