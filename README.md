@@ -1,8 +1,11 @@
 # [GreenSquare ReactJS]
 
-GreenSquare web catalog of agricultural crops
+GreenSquare web catalog of agricultural crops. Front-End made on ReactJS, Back-End  Asp.NET Core API.
+
+![Image](https://github.com/adilism48/green-square-front/blob/main/img/GSIndex.png)
 
 ## Video description
+https://youtu.be/F_480D1Zvec
 
 
 ## Tech
@@ -11,7 +14,7 @@ GreenSquare web catalog of agricultural crops
 - [React-Bootstrap] - used only for modal form
 
 
-## Installation
+## Run
 Working with API [GreenSquareAPI] in localhost.
 
 [//]: #
