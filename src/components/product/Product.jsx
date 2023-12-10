@@ -30,7 +30,7 @@ const Product = () => {
                 <div className="container">
                     <div className="filter__items">
                         <ul className="items__list">
-                            {['Vegetables', 'Fruits', 'Other'].map((itemName, i) => (
+                            {['Овощи', 'Фрукты', 'Другое'].map((itemName, i) => (
                                 <li key={i} onClick={() => onClickCategory(i)} className={value === i ? 'active' : ''}>
                                     {itemName}
                                 </li>
