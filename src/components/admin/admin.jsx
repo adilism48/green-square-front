@@ -86,29 +86,28 @@ const Admin = () => {
 return (
         <div className="admin">
             <div className="container">
-                <h2 className="admin-title">Add new product</h2>
+                <h2 className="admin-title">Добавить новый продукт</h2>
                 <div className="add-product">
                     <div className="admin-row">
                         <div>
-                            <label className="admin-input-label" htmlFor="name">Name:</label>
+                            <label className="admin-input-label" htmlFor="name">Имя:</label>
                             <input className="admin-input" id="name" name="name" type="text"/>
                         </div>
                         <div>
-                            <label className="admin-input-label" htmlFor="price">Price:</label>
+                            <label className="admin-input-label" htmlFor="price">Цена:</label>
                             <input className="admin-input" id="price" name="price" type="text"/>
                         </div>
                     </div>
                     <div className="admin-row">
                         <select className="categories" name="categories" id="categories">
-                            <option value="0">Vegetables</option>
-                            <option value="1">Fruits</option>
-                            <option value="2">Else</option>
+                            <option value="0">Овощи</option>
+                            <option value="1">Фрукты</option>
+                            <option value="2">Другое</option>
                         </select>
-                        <div>add photo</div>
                     </div>
                     <button className="add-btn" onClick={() => addProduct()}>Add</button>
                 </div>
-                <h2 className="admin-title">Product List</h2>
+                <h2 className="admin-title">Лист продуктов</h2>
                 <div className="product__list">
                     {
                         allProducts.map(x => (
@@ -126,25 +125,24 @@ export default Admin
 const ProductItem = ({product, deleteAction, updateAction}) => {
     return (
         <div className="product__item">
-            <div className="item_photo">photo</div>
             <div className="item__id">{product.id}</div>
             <div className="item__name">{product.product_name}</div>
             <div className="item__category">{product.category}</div>
             <div className="item__price">{product.price}</div>
             <div className="list-btns">
                 <ModalButton
-                    btnName={"Update"}
-                    title={"Update product"}
+                    btnName={"Изменить"}
+                    title={"Изменить продукт"}
                     modalContent={
                         <div>
                             <div>
-                                <label className="admin-input-label" htmlFor="name">Name:</label>
+                                <label className="admin-input-label" htmlFor="name">Имя:</label>
                                 <input className="admin-input-line" id="new-name" name="name" type="text" defaultValue={product.product_name} onChange={
                                     e => product.product_name = e.target.value
                                 }/>
                             </div>
                             <div>
-                                <label className="admin-input-label" htmlFor="price">Price:</label>
+                                <label className="admin-input-label" htmlFor="price">Цена:</label>
                                 <input className="admin-input-line" id="new-price" name="price" type="text" defaultValue={product.price} onChange={
                                     e => product.price = e.target.value
                                 }/>
@@ -152,11 +150,11 @@ const ProductItem = ({product, deleteAction, updateAction}) => {
                             <select className="categories-in-modal" name="new-categories" id="categories" defaultValue={product.category} onChange={
                                 e => product.category = e.target.value
                             }>
-                                <option value="0">Vegetables</option>
-                                <option value="1">Fruits</option>
-                                <option value="2">Else</option>
+                                <option value="0">Овощи</option>
+                                <option value="1">Фрукты</option>
+                                <option value="2">Другое</option>
                             </select>
-                            <Button variant="primary" onClick={() => updateAction(product)}>Update</Button>
+                            <Button variant="primary" onClick={() => updateAction(product)}>Изменить</Button>
                         </div>
 
                     }

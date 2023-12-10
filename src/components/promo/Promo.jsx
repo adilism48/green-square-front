@@ -8,12 +8,12 @@ const Promo = () => {
                 <div className="promo__content">
                     <div className="promo__text">
                         <div className="promo__title">
-                            Green Square is
-                            online catalog
-                            vegetables and fruits
+                            Зеленый квадрат
+                            это онлайн каталог
+                            овощей и фруктов
                         </div>
                         <div className="promo__small-title">
-                            Which you can order from us
+                            Которые вы можете заказать у нас
                         </div>
                     </div>
                     <div className="promo__img">

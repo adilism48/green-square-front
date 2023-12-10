@@ -1,12 +1,16 @@
 import './product.css'
 import Card from "../card/Card";
-import cucumber from './../../img/cucumber.jpg'
 import {useEffect, useState} from "react";
 import axios from "axios";
+
+import vegetables from '../../img/veg.jpg'
+import fruits from '../../img/fru.jpg'
+import other from '../../img/other.jpg'
 
 const Product = () => {
     const [value, onClickCategory] = useState(0)
     const [allProducts, setProducts] = useState([])
+    const images = [vegetables, fruits, other]
 
     useEffect(() => {
         axios.get(`http://localhost:5152/api/GreenSquare/GetProductsByCategory?category=${value}`).then(res => {
@@ -17,8 +21,8 @@ const Product = () => {
     return (
         <section className="product">
             <div className="product__header">
-                <h2 className="title-2">Our products</h2>
-                <h4 className="product__header__text">To order a product, you need to contact us by phone number</h4>
+                <h2 className="title-2">Наши продукты</h2>
+                <h4 className="product__header__text">Чтобы заказать товар, вам необходимо связаться с нами по номеру телефона</h4>
                 <h2 className="title-2">+996 555 223344</h2>
                 <h2 className="title-2">+996 777 223344</h2>
             </div>
@@ -39,7 +43,7 @@ const Product = () => {
                 <div className="product__cards">
                     {
                         allProducts.map(x => (
-                            <Card product={x} img={cucumber}/>
+                            <Card product={x} img={images[x.category]}/>
                         ))
                     }
                 </div>
